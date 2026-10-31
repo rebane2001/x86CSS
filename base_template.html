@@ -133,7 +133,9 @@
 <p>Not really... well, kind of?</p>
 <p>This entire CPU runs in just CSS and doesn't require any HTML code, but there is no way to load the CSS without a &lt;style&gt; tag, so that much is required. In Firefox <a href="https://lyra.horse/fun/tic-tac-nohtml/">it is possible</a> to load CSS with no HTML, but atm this demo only works in Chromium-based browsers.</p>
 <h3 id=browserSupport>Why does it only work in Chrome?</h3>
-<p>This project uses a few CSS features, such as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/if">if() statements</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries">style queries</a>, and custom <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function">@functions</a>, that are not available in all browsers. At this time, it's only compatible with Chromium-based browsers, but hopefully that'll change at some point since the features used are in the CSS spec. I usually make sure to target Firefox in the projects I make, but it's just not realistic for me with this one.</p>
+<p>This project uses a few CSS features, such as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/if">if() statements</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries">style queries</a>, and custom <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function">@functions</a>, that are not available in all browsers. At this time, it's only compatible with Chromium-based browsers, as well as Ladybird, but hopefully that'll change at some point since the features used are in the CSS spec. I usually make sure to target Firefox in the projects I make, but it's just not realistic for me with this one.</p>
+<h3>Wait, Ladybird?</h3>
+<p>As of October 23rd 2026, <a href="https://ladybird.org/">Ladybird</a> too, is capable of running x86css!</p>
 <h3>What preprocessor do you use?</h3>
 <p>I straight up just write CSS! The CSS in <a href="https://github.com/rebane2001/x86css/blob/mane/base_template.html">base_template.html</a> is handwritten in Sublime Text, but for the more repetitive parts of the code I wrote a <a href="https://github.com/rebane2001/x86css/blob/mane/build_css.py">python script</a>.</p>
 <h3 id=ai>What ai/model/llm do you use?</h3>
@@ -263,7 +265,7 @@ int _start(void) {
 </p>
 </info-box>
 <p style="text-align:right"><i>Feb 2026</i></p>
-<p style="color:red;position:fixed;top:72px;left:64px;background:#000;font-size:1.5rem;width:calc(100vw - 64px)" class="unableToRun">Your browser does not support the CSS features required to run this demo. Please try with an up-to-date Chromium-based browser. <a href=#browserSupport>Why?</a> <label style="text-decoration:underline;cursor:pointer">(hide message)<input type=checkbox tabindex="1" style="opacity: 0;position: absolute;pointer-events: none"></label></p>
+<p style="color:red;position:fixed;top:72px;left:64px;background:#000;font-size:1.5rem;width:calc(100vw - 64px)" class="unableToRun">Your browser does not support the CSS features required to run this demo. Please try with an up-to-date Chromium-based browser (or Ladybird). <a href=#browserSupport>Why?</a> <label style="text-decoration:underline;cursor:pointer">(hide message)<input type=checkbox tabindex="1" style="opacity: 0;position: absolute;pointer-events: none"></label></p>
 <style>
 /* test browser compatibility */
 @function --supportTest() returns <integer> { result: calc(1 + 1); }
